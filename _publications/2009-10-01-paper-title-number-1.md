@@ -1,15 +1,12 @@
 ---
-title: "Paper Title Number 1"
+title: "Key Feature Replacement of In-Distribution Samples for Out-of-Distribution Detection"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+permalink: /publication/KIRBY
+excerpt: 'This paper describes an out-of-distribution detection algorithm that works by constructing a surrogate OOD dataset.'
+date: 2023
+venue: 'Association for the Advancement of Artificial Intelligence (AAAI) 2023'
+paperurl: 'Not yet available'
+citation: 'Kim, J.*, Kong, S.T.* (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-This paper is about the number 1. The number 2 is left for future work.
+We proposed a method to construct a surrogate out-of-distribution dataset that can be used to train a network to detect out-of-distribution data.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
-
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
