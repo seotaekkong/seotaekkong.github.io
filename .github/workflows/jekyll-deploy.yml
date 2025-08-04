@@ -23,6 +23,18 @@ jobs:
         with:
           fetch-depth: 0 # Not required, but can be helpful for Jekyll themes
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a recent LTS Node.js version
+          cache: 'npm' # Caches npm dependencies
+      
+      - name: Install Node.js Dependencies
+        run: npm install # Or 'yarn install' if you use yarn
+      
+      - name: Build JavaScript Assets
+        run: npm run build # Or 'yarn build' if your package.json has a build script
+          
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
