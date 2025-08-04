@@ -15,6 +15,7 @@ education:
     - degree: M.S., Electrical and Computer Engineering
       university: University of Illinois, Urbana-Champaign
       time: 'Aug 2017 - May 2019'
+      details: []
     - degree: B.S., Electrical and Computer Engineering
       university: University of Illinois, Urbana-Champaign
       time: 'Aug 2014 - May 2017'
@@ -65,12 +66,13 @@ experience:
           tech: [ 'ML Research', 'NeurIPS', 'AAAI']
     - position: Cryptography Developer Intern
       company: ICTK Holdings
+      team: []
       location: 'South Korea'
       time: 'June 2017 - Aug 2017'
       details:
-      - headline: Cryptography in Embedded Systems
-        description: Developed a low-latency, minimal-memory Elliptic Curve Cryptography library from scratch, optimized for resource-constrained systems.
-        tech: [ 'C', 'Assembly', 'Cryptography', 'Performance Optimization']
+        - headline: Cryptography in Embedded Systems
+          description: Developed a low-latency, minimal-memory Elliptic Curve Cryptography library from scratch, optimized for resource-constrained systems.
+          tech: [ 'C', 'Assembly', 'Cryptography', 'Performance Optimization']
 
 # Technical Skills
 skills:

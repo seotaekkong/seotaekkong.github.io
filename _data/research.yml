@@ -45,12 +45,14 @@ clt_publications:
   - title: "Exact Error Exponents for Nonlinear Stochastic Approximation"
     venue: "In Progress"
     # url: ""
+    authors: [] 
     contribution: ""
     status: In Progress
   
 diffusion_publications:
   - title: "Sampling Error and Score Matching for Diffusion Models"
     venue: "In Progress"
+    authors: [] 
     # url: "https://arxiv.org/abs/2502.09884" 
     contribution: "This paper derives sharp error bounds for diffusion model sampling, quantifying the deviation of sampled outputs from the true distribution."
     status: In Progress
