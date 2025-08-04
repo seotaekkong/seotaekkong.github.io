@@ -3,7 +3,7 @@ name: Jekyll CI/CD
 on:
   push:
     branches:
-      - main # This workflow runs when code is pushed to the 'main' branch
+      - main
   workflow_dispatch:
 
 permissions:
@@ -21,31 +21,42 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Not required, but can be helpful for Jekyll themes
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20' # Use a recent LTS Node.js version
-          cache: 'npm' # Caches npm dependencies
+          cache: 'npm'
       
       - name: Install Node.js Dependencies
-        run: npm install # Or 'yarn install' if you use yarn
-      
+        run: npm install --legacy-peer-deps # Use --legacy-peer-deps for compatibility
+
+      # START: Added explicit directory creation and output verification
+      - name: Create assets/js directory (if it doesn't exist)
+        run: mkdir -p assets/js
+        
       - name: Build JavaScript Assets
-        run: npm run build:js # Or 'yarn build' if your package.json has a build script
-          
+        run: npm run build:js # Your correct script name
+      
+      - name: Verify main.min.js creation
+        run: |
+          ls -l assets/js/main.min.js # List the file and its size
+          cat assets/js/main.min.js | head -n 10 # Show first 10 lines
+          file assets/js/main.min.js # Show file type
+      # END: Added debugging steps
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2' 
-          bundler-cache: true # Caches bundle dependencies for faster builds
+          ruby-version: '3.2'
+          bundler-cache: true
 
       - name: Build Jekyll Site
         run: |
-          bundle exec jekyll build --trace # --trace gives more debugging info if it fails
+          bundle exec jekyll build --trace
         env:
-          JEKYLL_ENV: production # Ensures Jekyll builds for production
+          JEKYLL_ENV: production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
