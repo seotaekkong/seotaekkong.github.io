@@ -1,16 +1,20 @@
+<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+
+{% include analytics.html %}
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM Content Loaded! Custom script running.'); // Verify script execution
-
+  // It's good to keep these logs temporarily to verify script execution on the live site
+  console.log('DOM Content Loaded! Custom script running.');
   const toggles = document.querySelectorAll('.details-toggle');
-  console.log('Found toggles:', toggles.length, toggles); // Verify elements found
+  console.log('Found toggles:', toggles.length, toggles);
 
   toggles.forEach(function(toggle) {
     const contentToCollapse = toggle.parentElement.nextElementSibling;
-    console.log('Processing toggle:', toggle, 'Content to collapse:', contentToCollapse); // Verify correct element found
+    console.log('Processing toggle:', toggle, 'Content to collapse:', contentToCollapse);
 
     toggle.addEventListener('click', function() {
-      console.log('Button clicked!', this); // Verify click event fires
+      console.log('Button clicked!', this);
       
       this.classList.toggle('active');
       const isExpanded = this.classList.contains('active');
