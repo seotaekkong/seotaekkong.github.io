@@ -1,1 +1,35 @@
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+
+{% include analytics.html %}
+
+<script>
+// Your custom collapsible script, which is NOT a module
+document.addEventListener('DOMContentLoaded', function() {
+  const toggles = document.querySelectorAll('.details-toggle');
+
+  toggles.forEach(function(toggle) {
+    const contentToCollapse = toggle.parentElement.nextElementSibling;
+
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const isExpanded = this.classList.contains('active');
+
+      if (isExpanded) {
+        contentToCollapse.style.maxHeight = contentToCollapse.scrollHeight + 'px';
+        this.setAttribute('aria-expanded', 'true');
+        this.querySelector('.arrow').textContent = '▾';
+        if (this.firstChild.nodeType === Node.TEXT_NODE) {
+          this.firstChild.textContent = 'Hide Details ';
+        }
+      } else {
+        contentToCollapse.style.maxHeight = null;
+        this.setAttribute('aria-expanded', 'false');
+        this.querySelector('.arrow').textContent = '▸';
+        if (this.firstChild.nodeType === Node.TEXT_NODE) {
+          this.firstChild.textContent = 'Show Details ';
+        }
+      }
+    });
+  });
+});
+</script>
