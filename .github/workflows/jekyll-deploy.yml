@@ -3,7 +3,8 @@ name: Jekyll CI/CD
 on:
   push:
     branches:
-      - main # This workflow runs when you push to the 'main' branch
+      - main # This workflow runs when code is pushed to the 'main' branch
+  workflow_dispatch:
 
 permissions:
   contents: read
