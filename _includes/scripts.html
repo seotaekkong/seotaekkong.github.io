@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
   toggles.forEach(function(toggle) {
     const contentToCollapse = toggle.parentElement.nextElementSibling;
 
+    // Find the correct content to collapse.
+    console.log('Processing toggle:', toggle, 'Content to collapse:', contentToCollapse); // Verify correct element found
+
     toggle.addEventListener('click', function() {
+      console.log('Button clicked!', this); // Verify click event fires
+
       this.classList.toggle('active');
       const isExpanded = this.classList.contains('active');
 
