@@ -1,0 +1,24 @@
+# Academic Service
+title: Academic Service
+categories:
+  - name: Teaching
+    items: 
+      - course: ECE 586 MDPs and Reinforcement Learning
+        semester: Fall 2025
+        role: Teaching Assistant
+      - course: ECE 310 Digital Signal Processing
+        semester: Fall 2017
+        role: Teaching Assistant
+        
+  - name: Conference/Journal Review
+    items:
+      - name: NeurIPS
+      - name: ICML
+      - name: AAAI
+      - name: Open Journal of Control Systems
+
+  - name: Organizational Roles
+    items:
+      - role: Session Chair
+        event: INFORMS Applied Probability Society
+        year: 2025 

@@ -1,64 +1,99 @@
 ---
-layout: archive
-title: "CV"
+layout: default
+title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+<div class="container">
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+  <!-- Education Section -->
+  <section class="section">
+    <h2>{{ site.data.data.education.title }}</h2>
+    {% for item in site.data.data.education.items %}
+    <div class="item">
+      <h3>{{ item.degree }}</h3>
+      <h4>{{ item.university }}</h4>
+      <p class="time">{{ item.time }}</p>
+      {% if item.details %}
+      <div class="education-details">
+        {% for detail in item.details %}
+          <span class="detail-tag">{{ detail }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </section>
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+  <!-- Work Experience Section -->
+  <section class="section">
+    <h2>{{ site.data.data.experience.title }}</h2>
+    {% for item in site.data.data.experience.items %}
+    <div class="item">
+      <div class="item-header">
+    <div>
+      <h3>{{ item.position }}</h3>
+      <h4>{{ item.company }}</h4>
+      <p class="item-meta">
+        {% if item.team %}{{ item.team }}{% endif %}
+        {% if item.team and item.location %} <span class="separator">|</span> {% endif %}
+        {% if item.location %}{{ item.location }}{% endif %}
+        {% if item.location and item.time %} <span class="separator">|</span> {% endif %}
+        {% if item.time %}{{ item.time }}{% endif %}
+      </p>
+    </div>
+        <button class="details-toggle" aria-expanded="false" aria-controls="details-{{ forloop.index }}">
+          Details <span class="arrow">▸</span>
+        </button>
+      </div>
+      <div id="details-{{ forloop.index }}" class="collapsible-details">
+        <div class="accomplishments">
+          {% for acc in item.details %}
+            <div class="accomplishment-item">
+              <p class="headline"><strong>{{ acc.headline }}</strong></p>
+              <p class="description">{{ acc.description }}</p>
+              {% if acc.tech %}
+                <div class="tech-stack">
+                  {% for tech_item in acc.tech %}
+                    <span class="tech-tag">{{ tech_item }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+{% if site.data.data.skills %}
+<section class="section">
+  <h2>{{ site.data.data.skills.title }}</h2>
+  <div class="skills-grid">
+    {% for category in site.data.data.skills.categories %}
+    <div class="skill-category">
+      <h3>{{ category.name }}</h3>
+      <div class="skill-tags">
+        {% for item in category.items %}
+        <span class="skill-tag">{{ item }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+  <!-- Theoretical Foundations Section -->
+  <section class="section">
+    <h2>{{ site.data.data.foundations.title }}</h2>
+    <div class="foundations-container">
+      {% for item in site.data.data.foundations.items %}
+      <span class="tag">{{ item }}</span>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

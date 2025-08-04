@@ -1,0 +1,103 @@
+# Data for the Research Page
+research_topics:
+  - title: "Central Limit Theorem for Stochastic Optimization"
+    # description: "My core research focuses on the development of a <strong>Central Limit Theorem (CLT) for stochastic optimization</strong>. While traditional error bounds characterize the rate of convergence, this CLT provides a deeper understanding by describing the precise, asymptotic distribution of the algorithm's iterates. This offers a much finer-grained tool for analysis and system design."
+    description: "Stochastic optimization is a cornerstone of modern machine learning. Understanding its convergence behavior is key to both theory and practice. My research proves <strong>non-asymptotic Central Limit Theorems</strong> (CLTs) that describe how the output of stochastic algorithms fluctuates around the optimum. These results enable principled approaches to hyperparameter tuning and uncertainty quantification in learning systems."
+    publication_key: "clt_publications" 
+    applications:
+      - name: "Stochastic Gradient Descent (SGD)"
+        description: "Stochastic Gradient Descent (SGD) is a widely used algorithm for training machine learning models. Its iterative, noise-driven updates lead to sample trajectories that fluctuate as they descend the loss landscape. These trajectories may converge to the optimal solution at varying rates, depending on initialization, noise, and hyperparameters. Non-asymptotic Central Limit Theorems provides a probabilistic description of these fluctuations, quantifying the likelihood of deviations from the optimum within finite time."
+        figure: "images/sgd.png"
+        figcaption: "<strong>Figure 1:</strong> Sample trajectory of SGD on a loss landscape. Randomness in the initialization and gradient estimate influences convergence behavior. The spread of such trajectories is characterized by a non-asymptotic Central Limit Theorem, which quantifies their probabilistic fluctuations around the optimal solution."
+      - name: "Reinforcement Learning"
+        description: "In reinforcement learning, algorithms like Temporal Difference (TD) learning estimate value functions from noisy, sequential data. When combined with function approximation, these updates form a stochastic optimization process whose convergence behavior is often hard to analyze. The non-asymptotic Central Limit Theorem offers a way to understand the distribution of TD iterates around the true value function, enabling finite-sample guarantees and uncertainty-aware learning in complex environments."
+        figure: "images/td_learning.png"
+        figcaption: "<strong>Figure 2:</strong> (Left) A simple grid world environment. An agent learns the value function by traversing paths under stochastic transitions. (Right) Histogram of the error in the estimated value function. The non-asymptotic CLT captures the shape and spread of this distribution, enabling quantitative analysis of learning variability and confidence in the estimates." 
+  - title: "Sampling Error Bounds for Diffusion Models"
+    description: "Diffusion models are used to sample from complex distributions, such as those in generative modeling. My research focuses on deriving <strong>error bounds</strong> for the sampling process of diffusion models. These bounds quantify the deviation of sampled outputs from the true distribution, enabling better understanding and control over the sampling quality."
+    publication_key: "diffusion_publications"
+    applications:
+      - name: "Generative Modeling"
+        description: "Diffusion models are a class of generative models that learn to sample from complex data distributions. They iteratively refine random noise into structured outputs, such as images or text. Understanding the sampling error is crucial for ensuring high-quality outputs and controlling model behavior."
+        figure: "images/diffusion.png"
+        figcaption: "<strong>Figure 3:</strong> Diffusion model sampling process. A deep learning model is used to learn the parameters of a stochastic differential equation, and gradually transforms noise into a realistic image."
+  - title: "Crowdsourcing and Label Aggregation"
+    description: "Crowdsourcing algorithms are used to aggregate labels from multiple workers to infer the true underlying labels. My research focuses on a method to cluster tasks by difficulty, which addresses the common problem where worker reliability changes depending on the task's complexity. This approach enables aggregation models like Dawid-Skene to better estimate worker reliability on a per-difficulty basis, improving the overall accuracy of the final labels."
+    publication_key: "crowdsourcing_publications"
+    applications: 
+      - name: "Noisy Labels in Machine Learning"
+        description: "This research was motivated by my experience working with medical images, where the inherent difficulty of labeling radiology data often leads to noisy annotations from experts. In such applications, the proposed difficulty-clustering method can be used to generate a more reliable ground truth from multiple conflicting labels. This ultimately improves the quality of the data used for training and evaluating diagnostic AI models, enhancing their performance and robustness."
+        # figure: "images/crowdsourcing.png"
+        # figcaption: "<strong>Figure:</strong> Crowdsourcing label aggregation process. Tasks are clustered by difficulty, and worker reliability is estimated for each cluster. This enables more accurate aggregation of labels, leading to better performance in downstream machine learning tasks."
+
+clt_publications:
+  - title: "Nonasymptotic CLT and Error Bounds for Two-Time-Scale Stochastic Approximation"
+    authors: 
+      - "Seo Taek Kong"
+      - "Sihan Zeng"
+      - "Thinh T. Doan"
+      - "R. Srikant"
+    venue: "Under Review"
+    url: "https://arxiv.org/abs/2502.09884" 
+    contribution: "This paper establishes the first non-asymptotic CLT for Polyak-Ruppert averaging in two-time-scale stochastic approximation, providing precise error characterizations."
+    status: Published
+
+  - title: "Exact Error Exponents for Nonlinear Stochastic Approximation"
+    venue: "In Progress"
+    # url: ""
+    contribution: ""
+    status: In Progress
+  
+diffusion_publications:
+  - title: "Sampling Error and Score Matching for Diffusion Models"
+    venue: "In Progress"
+    # url: "https://arxiv.org/abs/2502.09884" 
+    contribution: "This paper derives sharp error bounds for diffusion model sampling, quantifying the deviation of sampled outputs from the true distribution."
+    status: In Progress
+
+crowdsourcing_publications:
+  - title: "Spectral Clustering for Crowdsourcing with Inherently Distinct Task Types"
+    authors: 
+      - name: "Saptarshi Mandal"
+        equal_contribution: true
+      - name: "Seo Taek Kong"
+        equal_contribution: true
+      - name: "Dimitrios Katselis"
+      - name: "R. Srikant"
+    venue: "Under Review"
+    status: Published
+
+vuno_publications:
+  - title: "A Neural Pre-Conditioning Active Learning Algorithm to Reduce Label Complexity"
+    authors: 
+      - "Seo Taek Kong"
+      - "Soomin Jeon"
+      - "Dongbin Na"
+      - "Jaewon Lee"
+      - "Hong-Seok Lee"
+      - "Kyu-Hwan Jung"
+    venue: "NeurIPS 2022"
+    url: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/d3b8ce5e27b1c622d1b3da22b215e59b-Abstract-Conference.html"
+    contribution: "Developed an active learning algorithm to best select data to be labelled."
+  - title: "Key Feature Replacement of In-Distribution Samples for Out-of-Distribution Detection"
+    authors: 
+      - name: "Jaeyoung Kim"
+        equal_contribution: true
+      - name: "Seo Taek Kong"
+        equal_contribution: true
+      - name: "Dongbin Na"
+      - name: "Kyu-Hwan Jung"
+    venue: "AAAI 2023"
+    url: "https://ojs.aaai.org/index.php/AAAI/article/view/25995"
+    contribution: "Proposed a method to train a neural network for out-of-distribution detection."
+  - title: "Self-supervised learning with electrocardiogram delineation for arrhythmia detection"
+    authors: 
+      - name: "Byeong Tak Lee"
+        equal_contribution: true
+      - name: "Seo Taek Kong"
+        equal_contribution: true
+      - name: "Youngjae Song"
+      - name: "Yeha Lee"
+    venue: "IEEE EMBC 2021"
+    url: "https://ieeexplore.ieee.org/abstract/document/9630364"
+    contribution: "Developed a self-supervised learning method for arrhythmia detection using ECG data."

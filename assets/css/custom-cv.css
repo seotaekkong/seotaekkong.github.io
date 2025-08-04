@@ -1,0 +1,1177 @@
+/* --- CV Page Specific Styles --- */
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Items (Experience & Education) */
+.item {
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.item h4 {
+    margin: 2px 0;
+    font-size: 1em;
+    font-weight: normal;
+    color: #555;
+}
+
+.item .location {
+    font-style: italic;
+}
+
+.item .time {
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.item .details, .item ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+
+
+@keyframes fill-bar {
+    from { width: 0; }
+}
+
+/* Foundations Tags */
+.foundations-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tag {
+    background-color: #eef4ff;
+    color: #0056b3;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+}
+
+/* --- Education Details Styling --- */
+
+.education-details {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* This creates space between the tags */
+}
+
+.detail-tag {
+    background-color: #e9ecef; /* A light, professional grey */
+    color: #495057; /* A darker grey for text */
+    padding: 4px 12px;
+    border-radius: 16px; /* This makes it pill-shaped */
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.detail-tag::before {
+    content: '★'; /* Adds a subtle star icon */
+    margin-right: 6px;
+    color: #6c757d;
+}
+
+.detail-tag:hover {
+    background-color: #dde2e6;
+    transform: translateY(-1px);
+}
+
+/* --- Collapsible Job Details --- */
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.details-toggle {
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    white-space: nowrap; /* Prevents button text from wrapping */
+    transition: all 0.2s ease;
+    margin-top: 5px;
+}
+
+.details-toggle:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.details-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.details-toggle.active .arrow {
+    transform: rotate(90deg);
+}
+
+.collapsible-details {
+    max-height: 0; /* This is the key to the animation */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+/* styles.css */
+
+.skills {
+  margin-bottom: 2rem;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between categories */
+}
+
+.skill-category h3 {
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #eee; /* A subtle separator */
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Space between tags */
+}
+
+.skill-tag {
+  background-color: #e0eafc; /* A light, friendly blue */
+  color: #3d5a80; /* A darker blue for text */
+  padding: 0.5rem 1rem;
+  border-radius: 15px; /* Pill-shaped tags */
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Optional: Add a hover effect for a bit of interactivity */
+.skill-tag:hover {
+  background-color: #3d5a80;
+  color: #ffffff;
+}
+
+/* --- Metadata Styling for Work/Education --- */
+
+.item-meta {
+    font-size: 0.95em;
+    color: #6c757d; /* A muted, professional grey */
+    font-style: italic;
+    margin: 5px 0 0 0;
+}
+
+.item-meta .separator {
+    color: #adb5bd; /* Makes the separator even more subtle */
+    margin: 0 0.5em;
+}
+
+/* Tweak existing h4 to remove extra margin */
+.item h4 {
+    margin: 0;
+}
+
+/* --- Accomplishment & Tech Stack Styling --- */
+
+.accomplishments {
+    padding-top: 15px;
+}
+
+.accomplishment-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #007bff;
+}
+
+.accomplishment-item:last-child {
+    margin-bottom: 10px;
+}
+
+.accomplishment-item .headline {
+    font-size: 1.05em;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.accomplishment-item .description {
+    margin: 0 0 12px 0;
+    color: #495057;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+/* --- Research Page Styling --- */
+
+.research-container {
+    max-width: 800px; /* Slightly narrower for better readability */
+}
+
+.centered-text {
+    text-align: center;
+    margin: 20px 0 50px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.research-intro {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-scholar {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-scholar:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.research-section {
+    margin-bottom: 30px;
+}
+
+.research-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+.research-section p, .research-section ul {
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+.research-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.research-section li {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+/* --- "About Me" Page Styling --- */
+
+/* Main container for the about page */
+.about-container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Header section with photo and text */
+.about-header {
+    display: flex;
+    align-items: center; /* Vertically aligns the photo and text */
+    gap: 30px; /* Space between photo and text */
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* Allows it to stack on small screens */
+    justify-content: center; /* Centers items when they wrap */
+}
+
+/* The circular profile picture */
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Prevents the image from being distorted */
+    border: 3px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* The text next to the photo */
+.header-text {
+    flex: 1; /* Allows the text to take up the remaining space */
+}
+
+.header-text h1 {
+    font-size: 2.8em;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.header-text .subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin: 0;
+}
+
+/* The visual divider line */
+hr.about-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 2rem 0;
+}
+
+/* The main text content */
+.narrative-content p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-header {
+        flex-direction: column; /* Stacks the photo on top of the text */
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 2.2em;
+    }
+}
+
+/* --- Service Page Styling --- */
+
+.service-container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+
+
+/* --- Academic Service Page Styling --- */
+
+.service-container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.service-category {
+    margin-bottom: 3rem;
+}
+
+.service-category h2 {
+    font-size: 1.6em; /* Slightly smaller, more refined heading */
+    font-weight: 600; /* A bit lighter */
+    margin-bottom: 1.5rem;
+    color: #343a40;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef; /* A more subtle underline */
+}
+
+.service-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* A little tighter spacing */
+}
+
+/* --- Styling for Reviewer Tags --- */
+.service-tag {
+    background-color: #e9ecef; /* A professional light grey */
+    color: #495057;
+    padding: 6px 15px;
+    border-radius: 20px; /* Pill-shaped tags */
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.service-tag:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* --- Styling for Structured "Cards" (Teaching/Organizational) --- */
+.service-item-card {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #f1f3f5; /* Lighter border */
+    border-left: 4px solid #007bff;
+    padding: 1rem 1.5rem; /* Use rems for better scaling */
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 0.5rem; /* Add some space between cards */
+}
+
+.service-item-card:hover {
+    border-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.service-item-card .item-main {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #212529; /* Darker, more prominent text */
+}
+
+.service-item-card .item-context {
+    font-size: 1em;
+    color: #6c757d; /* Lighter context text */
+    text-align: right;
+    font-style: italic; /* Italicize to de-emphasize */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .service-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .service-item-card .item-context {
+        text-align: left;
+    }
+}
+
+/* --- Research Page Embedded Figure Styling --- */
+
+.embedded-research-figure {
+    margin: 1.5rem auto 0.5rem; /* Adds space above the figure */
+    max-width: 600px; /* IMPORTANT: This controls the maximum width of the figure */
+    text-align: center;
+    background-color: #fff; /* A white background to lift it off the blue box */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.embedded-research-figure img {
+    max-width: 100%; /* Ensures the image scales down correctly */
+    height: auto;
+    border-radius: 4px; /* A slight rounding for the image itself */
+}
+
+.embedded-research-figure figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #6c757d;
+    font-style: normal; /* Captions inside the blue box look better without italics */
+}
+
+/* --- Collapsible Application Details --- */
+
+/* The header containing the title and button */
+.application-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.application-header strong {
+    font-size: 1.1em;
+}
+
+/* We can reuse the .details-toggle button style from the CV page */
+/* If you don't have it, here's a good default: */
+.details-toggle {
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.details-toggle:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.details-toggle .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.details-toggle.active .arrow {
+    transform: rotate(90deg);
+}
+
+/* The content that gets collapsed */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; /* A smooth animation */
+    padding-top: 0; /* Ensures no padding when collapsed */
+}
+
+.collapsible-content p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* --- Research Sub-section and Publication Styling --- */
+
+/* Wrapper for the publication cards to control spacing */
+.publication-cards-wrapper {
+    display: grid;
+    gap: 1.5rem; /* Space between individual publication cards */
+}
+
+/* This targets the sub-section container (e.g., for 'Relevant Publications' and 'Applications') */
+.sub-section {
+    /* Reverted: Removed background-color, border, border-radius, padding, box-shadow */
+    margin-top: 2rem; /* Pushes it down from the description above it */
+}
+
+/* Style for sub-section headers (e.g., 'Relevant Publications', 'Applications') */
+.subsection-header {
+    display: flex; /* Makes items display in a row */
+    justify-content: space-between; /* Pushes H4 to left, button to right */
+    align-items: center; /* Vertically centers H4 and button */
+    gap: 1rem; /* Space between H4 and button */
+    margin-bottom: 0.75rem; /* NEW: Reduced space below the header */
+    padding-bottom: 0.75rem; /* Space under the border line */
+    border-bottom: 1px solid #e9ecef; /* A subtle line under the header */
+}
+
+/* Specific styling for the H4 title inside the sub-section header */
+.subsection-header h4 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #343a40;
+    margin: 0; /* Ensures no extra margin pushes the button down */
+    flex-shrink: 1; /* Allows the title to shrink if needed on small screens */
+}
+
+/* Ensure the main description paragraph has sufficient bottom margin */
+.research-topic-card > p {
+    margin-bottom: 2rem; /* Ensures enough space before the first sub-section */
+}
+
+/* Adjust application list to not have its own background inside the card */
+.research-topic-card .application-list li {
+    background-color: transparent; /* Ensures no blue box background */
+    padding: 0;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-top: 1px solid #f1f3f5; /* Subtle line between list items */
+    padding-top: 1.5rem;
+    border-radius: 0;
+}
+
+
+
+/* --- Publication Card Styling --- */
+.publication-cards-wrapper {
+    display: grid;
+    gap: 1.5rem; /* Gap between grid items (cards) */
+}
+
+.pub-card {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e9ecef; /* Light border around the card */
+    border-left: 4px solid #007bff; /* NEW: Strong blue left border for visual accent */
+    border-radius: 0 8px 8px 0; /* NEW: Only round the right corners for a sleek look with the left border */
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Slightly more prominent initial shadow */
+    transition: all 0.2s ease-in-out;
+}
+
+.pub-card:hover {
+    transform: translateY(-3px); /* Lifts the card on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Stronger shadow on hover */
+    border-color: #dee2e6; /* General border color change on hover */
+    border-left-color: #0056b3; /* NEW: Make the left accent darker on hover */
+}
+
+.pub-header {
+    display: flex;
+    justify-content: space-between; /* Pushes items to opposite ends */
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 1rem; /* Space between the info and the badge */
+    margin-bottom: 1rem;
+}
+
+.pub-info {
+    flex-grow: 1; /* Allows the title/venue to take up available space */
+}
+
+.pub-card .pub-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3; /* Tighter line height for the title */
+}
+
+.pub-card .pub-title a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.pub-card .pub-title a:hover {
+    text-decoration: underline;
+}
+
+.pub-card .pub-venue {
+    font-size: 1em;
+    font-style: italic;
+    color: #555;
+    margin: 0.25rem 0 0 0;
+}
+
+.pub-card .pub-contribution {
+    font-size: 1em;
+    color: #343a40;
+    margin: 1rem 0 0 0;
+    border-top: 1px solid #f1f3f5;
+    padding-top: 1rem;
+}
+
+/* --- Status Badge Styling --- */
+.pub-status {
+    /* position: absolute;  <-- REMOVED THIS LINE */
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Prevents badge text from wrapping */
+    margin-top: 2px; /* A slight adjustment for vertical alignment */
+}
+
+.status-published {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-inprogress {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* --- Industry Experience Section Styling --- */
+
+.industry-experience-wrapper {
+    display: grid;
+    gap: 1.5rem; /* Space between the cards */
+}
+
+.industry-card {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.industry-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.industry-card h4 {
+    display: flex; /* Aligns logo and text */
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #212529;
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.industry-card .company-logo {
+    height: 24px; /* Controls the size of the logo */
+    margin-right: 12px;
+}
+
+.industry-card p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #343a40;
+    margin: 0;
+}
+
+/* --- Industry & Applied Research Section Styling --- */
+/* --- Styling for Research & Industry Cards --- */
+
+.research-topics-wrapper,
+.industry-experience-wrapper {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.industry-card {
+    background-color: #f8f9fa; /* The consistent light grey background */
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.industry-card:hover {
+    border-color: #dee2e6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+/* Style for the Research Topic Title */
+.industry-card h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #212529;
+    margin: 0 0 1rem 0;
+}
+
+/* Style for the Company Name */
+.industry-card h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #212529;
+    margin: 0 0 1rem 0;
+}
+
+.industry-card .company-logo {
+    height: 24px;
+    margin-left: auto;
+    padding-left: 1rem;
+}
+
+.industry-card p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #343a40;
+    margin: 0; /* Removed bottom margin to be consistent */
+}
+
+/* Add back the margin for the main summary paragraphs */
+.industry-card .industry-summary p,
+.research-topic-card > p {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+.industry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.tech-tag {
+    background-color: #eef4ff;
+    color: #0056b3;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+}
+
+/* --- Refined Research Hero Section --- */
+
+.research-hero {
+    background-color: #f1f7ff; /* A very light, professional blue */
+    color: #333; /* Default text color */
+    text-align: center;
+    padding: 3rem 1rem; /* Slightly less vertical padding */
+    margin-bottom: 3rem; /* More space before the main content starts */
+    border-radius: 8px; /* Matches other card rounded corners */
+    border: 1px solid #e0eaff; /* A subtle, matching border */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04); /* Soft shadow */
+}
+
+.research-hero .hero-content {
+    /* No max-width here, it will inherit from .research-container */
+    margin: 0 auto; /* Centers the content block */
+}
+
+.research-hero h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    color: #003366; /* <-- New color */
+}
+
+.research-hero .hero-subtitle {
+    font-size: 1.15em; /* Slightly smaller subtitle */
+    color: #555;
+    margin: 0 auto 2rem auto;
+    max-width: 600px; /* Constrains line length for readability within the softer tone */
+}
+
+/* The new "filled button" style */
+.btn-hero-scholar {
+    display: inline-block;
+    background-color: #007bff; /* A solid blue button */
+    color: #fff; /* White text */
+    border: none; /* No border for a filled button */
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-hero-scholar:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-hero-scholar .fas {
+    margin-right: 0.75rem;
+}
+
+/* Ensure research-container properly manages its width */
+.research-container {
+    max-width: 900px; /* Consistent with other containers */
+    margin: 40px auto;
+    padding: 20px;
+    /* Removed background and box-shadow here, as hero section has it now */
+    border-radius: 8px;
+}
+
+.embedded-research-figure .figure-citation {
+  font-size: 0.75em;
+  color: #999;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* --------------- FINAL SIMPLIFIED TIMELINE --------------- */
+
+/* --- Container --- */
+.timeline-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  position: relative;
+}
+/* The main vertical line */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  left: 100px;
+  width: 3px;
+  background: #e0e0e0;
+  top: 15px;
+  bottom: 15px;
+}
+
+/* --- Timeline Row --- */
+.timeline-item, .timeline-sub-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 120px;
+}
+/* The main content "card" */
+.timeline-content {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* --- Dots (Positioned relative to the row for stability) --- */
+.timeline-item::before, .timeline-sub-item::before {
+  content: '';
+  position: absolute;
+  left: 92.5px;
+  top: 12px; /* Adjusted for better vertical centering with content */
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  border: 3px solid;
+  border-radius: 50%;
+  z-index: 1;
+}
+/* Color coding the dots */
+.timeline-item[data-type="education"]::before { border-color: #3498db; }
+.timeline-item[data-type="industry"]::before,
+.timeline-sub-item[data-type="industry"]::before { border-color: #f39c12; }
+
+/* --- Nesting & Connector Line --- */
+.timeline-sub-item .timeline-content {
+  margin-left: 40px;
+}
+.timeline-sub-item::after {
+  content: '';
+  position: absolute;
+  left: 110px;
+  top: 17px;
+  width: 30px;
+  height: 3px;
+  background: #e0e0e0;
+}
+
+/* --- Date Styling --- */
+.timeline-period {
+  position: absolute;
+  left: 0;
+  top: 5px; /* Align with top of content card */
+  width: 100px;
+  padding-right: 1rem;
+  text-align: right;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+/* Multi-line date alignment */
+.timeline-period.multi-line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.timeline-period .separator {
+  align-self: center;
+  padding: 2px 0;
+}
+
+/* --- Content Text Styling --- */
+.timeline-title {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 700;
+}
+.timeline-institution {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* --------------- TWO-COLUMN LAYOUT --------------- */
+
+/* 1. The Grid Container */
+.about-grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Main column is twice as wide as the sidebar */
+  grid-gap: 3rem; /* The space between the columns */
+}
+
+/* 2. Responsive Behavior for Mobile */
+/* On screens smaller than 800px, stack the columns vertically */
+@media (max-width: 800px) {
+  .about-grid-container {
+    grid-template-columns: 1fr; /* A single column */
+  }
+  .sidebar-column {
+    /* Optional: Reorder the sidebar to appear first on mobile */
+    grid-row: 1; 
+  }
+}
+
+
+/* --------------- SIDEBAR STYLING --------------- */
+
+.sidebar-column {
+  position: sticky; /* Makes the sidebar "stick" as you scroll */
+  top: 2rem;       /* The distance from the top it sticks at */
+  align-self: start; /* Aligns the sidebar to the top of the grid row */
+}
+
+/* 3. Style for the Sidebar Boxes */
+.sidebar-box {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.sidebar-box h4 {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+.sidebar-box p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* 4. Profile Photo */
+.profile-photo {
+  width: 100%;
+  border-radius: 50%; /* Makes the photo circular. Use 8px for a rounded rectangle. */
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 5. Contact & Social Lists */
+.contact-list, .social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list li, .social-links li {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.contact-list li:last-child, .social-links li:last-child {
+  margin-bottom: 0;
+}
+.contact-list strong {
+  color: #333;
+}
+.contact-list a, .social-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --------------- NEW TWO-COLUMN CONTENT LAYOUT --------------- */
+
+/* 1. The Grid Container */
+.content-grid-container {
+  display: grid;
+  /* Creates two columns: the first takes up 2 parts of the space, the second takes 1 part. */
+  grid-template-columns: 2fr 1.25fr; 
+  /* The space between the columns */
+  grid-gap: 3rem; 
+}
+
+/* 2. Responsive Behavior for Mobile */
+/* On screens smaller than 992px (tablets and phones), stack the columns */
+@media (max-width: 992px) {
+  .content-grid-container {
+    grid-template-columns: 1fr; /* A single column */
+  }
+}
+
+/* --------------- TIMELINE ADJUSTMENTS FOR SIDEBAR --------------- */
+/* These rules only apply when the timeline is inside the new sidebar,
+   preventing it from looking cramped. */
+
+.timeline-sidebar-column .timeline-content {
+  /* Reduce padding on the cards */
+  padding: 0.6rem 1rem;
+}
+
+.timeline-sidebar-column .timeline-title {
+  /* Make the title font slightly smaller */
+  font-size: 1rem;
+}
+
+.timeline-sidebar-column .timeline-institution {
+  /* Make the institution font slightly smaller */
+  font-size: 0.9rem;
+}
+
+.timeline-sidebar-column .timeline-item,
+.timeline-sidebar-column .timeline-sub-item {
+  /* Reduce the left padding to save space */
+  padding-left: 105px;
+  margin-bottom: 1.25rem;
+}
+
+/* Reposition the dot and connector line for the narrower layout */
+.timeline-sidebar-column .timeline-item::before,
+.timeline-sidebar-column .timeline-sub-item::before {
+  left: 82.5px;
+  top: 10px;
+}
+
+.timeline-sidebar-column .timeline-sub-item .timeline-content {
+  margin-left: 30px;
+}
+
+.timeline-sidebar-column .timeline-sub-item::after {
+  left: 95px;
+  top: 15px;
+  width: 20px;
+}
+
+/* Adjust the date container */
+.timeline-sidebar-column .timeline-period {
+  width: 85px;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,106 @@
+#_data/data.yml
+name: Seo Taek Kong 
+contact:
+  email: seotaekkong@gmail.com 
+  scholar: https://scholar.google.com/citations?user=YFmOjdQAAAAJ&hl=en
+
+# Education
+education:
+  title: Education
+  items:
+    - degree: Ph.D. Candidate, Electrical and Computer Engineering
+      university: University of Illinois, Urbana-Champaign
+      time: 'Aug 2022 - May 2027 (Expected)'
+      details: 'Advisor: R. Srikant'
+    - degree: M.S., Electrical and Computer Engineering
+      university: University of Illinois, Urbana-Champaign
+      time: 'Aug 2017 - May 2019'
+    - degree: B.S., Electrical and Computer Engineering
+      university: University of Illinois, Urbana-Champaign
+      time: 'Aug 2014 - May 2017'
+      details:
+        - 'Highest Honors'
+        - 'Minor in Mathematics'
+        - 'James Scholor Honors Program'
+# Work Experience
+experience:
+  title: Work Experience
+  items:
+    - position: Applied Scientist Intern
+      company: Amazon 
+      team: Product Quality & Perfect Order Experience
+      location: Seattle, WA
+      time: 'May 2024 - Aug 2024'
+      details:
+        # - headline: Developed a Predictive Model for Customer Satisfaction Assessment
+        - headline: Predicting Customer Satisfaction
+          description: Understanding customer satisfaction is difficult because feedback is scarce. I developed an ensemble of machine learning models to predict customer satisfaction based on behavioral signals, which can be used to enhance downstream systems including product ranking and behavior modeling. 
+          # Addressed a critical data sparsity problem by creating a model to infer user satisfaction from behavioral signals. The resulting score provides a foundational feature to enhance downstream systems, including product ranking and behavior modeling.
+          tech: [ 'Ensemble Models', 'AutoGluon', 'Polars', 'AWS', 'Apache Spark']
+    - position: Applied Scientist Intern
+      company: Amazon 
+      team: Search Relevance - Final Stage Ranking
+      location: Palo Alto, CA
+      time: 'May 2023 - Feb 2024'
+      details:
+        # - headline: Surpassed Production Baseline with LLM-based Ranking Model
+        - headline: Ranking Products with LLMs
+          description: Learning to rank products is a complex task that requires understanding user intent and product relevance. I developed a listwise-ranking LLM that demonstrated superior performance over a production baseline in key ranking metrics, significantly improving search relevance.
+          tech: [ 'LLM', 'PyTorch', 'HuggingFace', 'Semantic Search', 'Ranking', "AWS"]
+    - position: AI Researcher and Team Lead
+      company: VUNO Inc.
+      team: Advanced Research
+      location: South Korea
+      time: 'May 2019 - Aug 2022'
+      details:
+        - headline: Deep Learning for Radiology
+          description: Medical imaging presents unique challenges such as limited labeled data, class imbalance, label noise, and device-specific variability. I contributed to the development and analysis of deep learning models across diverse modalities including chest X-ray, CT, MRI, and histopathology. 
+          tech: [ 'Deep Learning', 'Medical Imaging', 'Computer Vision' ]
+        - headline: Promoted to Research Lead
+          description: Initiated long-term research directions across teams, collaborated closely to drive publications, and mentored junior researchers.           
+          # Set the technical vision for the advanced research team and mentored junior researchers.
+          tech: [ 'Leadership', 'Mentorship']
+        - headline: Published Research in AI & Medical Venues
+          description: Authored first-author papers at machine learning conferences (NeurIPS, AAAI) and contributed to multiple publications in leading medical imaging venues like MICCAI.
+          tech: [ 'ML Research', 'NeurIPS', 'AAAI']
+    - position: Cryptography Developer Intern
+      company: ICTK Holdings
+      location: 'South Korea'
+      time: 'June 2017 - Aug 2017'
+      details:
+      - headline: Cryptography in Embedded Systems
+        description: Developed a low-latency, minimal-memory Elliptic Curve Cryptography library from scratch, optimized for resource-constrained systems.
+        tech: [ 'C', 'Assembly', 'Cryptography', 'Performance Optimization']
+
+# Technical Skills
+skills:
+  title: Technical Skills
+  categories:
+    - name: Programming Languages
+      items:
+        - Python
+        - C
+        - Assembly
+    - name: Machine Learning & Data Science
+      items:
+        - PyTorch
+        - Hugging Face
+        - Pandas
+        - Polars
+        - Scikit-learn
+    # - name: Developer Tools & Platforms
+    #   items:
+        # - Git & GitHub
+        # - AWS (EC2, SageMaker)
+        # - Docker
+
+# Foundational Knowledge Section
+foundations:
+  # title: Theoretical Foundations
+  title: Research Interests
+  items:
+    - 'Diffusion Processes'
+    - 'Stochastic Optimization'
+    - 'Probability Theory'
+    # - 'Active Learning'
+    # - 'Out-of-Distribution Detection'
