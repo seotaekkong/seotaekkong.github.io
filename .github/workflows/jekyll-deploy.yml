@@ -1,0 +1,44 @@
+name: Jekyll CI/CD
+
+on:
+  push:
+    branches:
+      - main # This workflow runs when you push to the 'main' branch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Not required, but can be helpful for Jekyll themes
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.x' # Use a recent stable Ruby version (e.g., 3.2, 3.3)
+          bundler-cache: true # Caches bundle dependencies for faster builds
+
+      - name: Build Jekyll Site
+        run: |
+          bundle exec jekyll build --trace # --trace gives more debugging info if it fails
+        env:
+          JEKYLL_ENV: production # Ensures Jekyll builds for production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
