@@ -33,7 +33,7 @@ jobs:
         run: npm install # Or 'yarn install' if you use yarn
       
       - name: Build JavaScript Assets
-        run: npm run build # Or 'yarn build' if your package.json has a build script
+        run: npm run build:js # Or 'yarn build' if your package.json has a build script
           
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
