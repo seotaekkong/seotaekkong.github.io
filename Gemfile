@@ -9,6 +9,7 @@ group :jekyll_plugins do
   gem 'webrick', '~> 1.8'
   gem 'jekyll-gist'
   gem 'jekyll-paginate'
+  gem 'kramdown-parser-gfm'  
 end
 
 gem 'connection_pool', '2.5.0'
