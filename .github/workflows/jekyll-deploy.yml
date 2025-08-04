@@ -26,25 +26,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use a recent LTS Node.js version
+          node-version: '20'
           cache: 'npm'
       
       - name: Install Node.js Dependencies
-        run: npm install --legacy-peer-deps # Use --legacy-peer-deps for compatibility
+        run: npm install --legacy-peer-deps
 
-      # START: Added explicit directory creation and output verification
       - name: Create assets/js directory (if it doesn't exist)
         run: mkdir -p assets/js
         
       - name: Build JavaScript Assets
-        run: npm run build:js # Your correct script name
+        run: npm run build:js
       
       - name: Verify main.min.js creation
         run: |
-          ls -l assets/js/main.min.js # List the file and its size
-          cat assets/js/main.min.js | head -n 10 # Show first 10 lines
-          file assets/js/main.min.js # Show file type
-      # END: Added debugging steps
+          ls -l assets/js/main.min.js
+          cat assets/js/main.min.js | head -n 10
+          file assets/js/main.min.js
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -54,14 +52,23 @@ jobs:
 
       - name: Build Jekyll Site
         run: |
-          bundle exec jekyll build --trace
+          bundle exec jekyll build --trace # This should create _site
         env:
           JEKYLL_ENV: production
+
+      # START: NEW DEBUGGING STEPS HERE
+      - name: List contents after Jekyll build
+        run: |
+          echo "Listing contents of current directory:"
+          ls -la
+          echo "Listing contents of _site directory:"
+          ls -la _site || echo "_site directory not found or empty."
+      # END: NEW DEBUGGING STEPS
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./_site # This path must point to where _site is created
 
       - name: Deploy to GitHub Pages
         id: deployment
