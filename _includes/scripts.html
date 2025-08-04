@@ -1,21 +1,17 @@
-<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
-
-{% include analytics.html %}
-
 <script>
-// Your custom collapsible script, which is NOT a module
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM Content Loaded! Custom script running.'); // Verify script execution
+
   const toggles = document.querySelectorAll('.details-toggle');
+  console.log('Found toggles:', toggles.length, toggles); // Verify elements found
 
   toggles.forEach(function(toggle) {
     const contentToCollapse = toggle.parentElement.nextElementSibling;
-
-    // Find the correct content to collapse.
     console.log('Processing toggle:', toggle, 'Content to collapse:', contentToCollapse); // Verify correct element found
 
     toggle.addEventListener('click', function() {
       console.log('Button clicked!', this); // Verify click event fires
-
+      
       this.classList.toggle('active');
       const isExpanded = this.classList.contains('active');
 
