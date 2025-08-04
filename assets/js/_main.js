@@ -140,3 +140,37 @@ $(document).ready(function () {
   });
 
 });
+
+
+
+
+
+
+/* Logic for collapsible buttons */
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButtons = document.querySelectorAll('.details-toggle');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const container = this.closest('.sub-section') || this.closest('.item');
+      if (!container) return;
+
+      const content = container.querySelector('.collapsible-content') || container.querySelector('.collapsible-details');
+      if (!content) return;
+
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+
+      if (!isExpanded) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = null;
+      }
+
+      const arrow = this.querySelector('.arrow');
+      if (arrow) {
+        arrow.textContent = !isExpanded ? '▾' : '▸';
+      }
+    });
+  });
+});
