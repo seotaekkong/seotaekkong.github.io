@@ -3,7 +3,6 @@ layout: archive
 title: "Research"
 permalink: /research/
 author_profile: true
-excerpt_separator: ""
 ---
 
 <div class="container research-container">
