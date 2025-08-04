@@ -13,7 +13,7 @@ site_theme               : "default"
 title_separator          : "-"
 name                     : &name "Seo Taek Kong"
 description              : &description "PhD Candidate specializing in machine learning theory and stochastic optimization."
-url                      : https://github.com/seotaekkong/stkong.github.io # the base hostname & protocol for the site e.g. "https://[GitHub username].github.io" 
+url                      : https://seotaekkong.github.io 
 baseurl                  : "" # the subpath, e.g. "/blog"
 repository               : "seotaekkong/stkong.github.io"
 
