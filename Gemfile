@@ -13,3 +13,5 @@ group :jekyll_plugins do
 end
 
 gem 'connection_pool', '2.5.0'
+
+gem "faraday-retry", "~> 2.4"

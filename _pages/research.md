@@ -26,7 +26,7 @@ author_profile: true
       {% for topic in site.data.research.research_topics %}
         <div class="industry-card">
           <h4>{{ topic.title }}</h4>
-          <p>{{ topic.description }}</p>
+          <!-- <p>{{ topic.description }}</p> -->
           <!-- Relevant Publications Sub-section (Collapsible) -->
           {% assign pub_list = site.data.research[topic.publication_key] %}
           {% if pub_list %}
@@ -90,29 +90,6 @@ author_profile: true
               </div>
             </div>
           {% endif %}
-          <!-- Applications Sub-section (Collapsible) -->
-          {% if topic.applications %}
-            <div class="sub-section">
-              <div class="subsection-header">
-                <h4>Applications</h4>
-                <button class="details-toggle" aria-expanded="false">Show <span class="arrow">▸</span></button>
-              </div>
-              <div class="collapsible-content">
-                <ul class="application-list">
-                  {% for app in topic.applications %}
-                    <li>
-                      <div class="application-header"><strong>{{ app.name }}</strong></div>
-                      <p>{{ app.description }}</p>
-                      <figure class="embedded-research-figure">
-                        <img src="{{ app.figure | relative_url }}" alt="Illustration for {{ app.name }}">
-                        <figcaption>{{ app.figcaption }}</figcaption>
-                      </figure>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>
-          {% endif %}
         </div>
       {% endfor %}
     </div>
@@ -125,25 +102,17 @@ author_profile: true
       <!-- Amazon Experience Card -->
       <div class="industry-card">
         <h4>Amazon<img src="/images/amazon-logo-squid-ink-smile-orange.png" alt="Amazon logo" class="company-logo"></h4>
-        <p>
-          During my 12 months as an Applied Scientist Intern, I developed and validated machine learning models for key business problems. My work spanned two areas: developing Large Language Models (LLMs) to improve semantic search ranking, and architecting predictive models from user behavioral signals to solve critical data sparsity issues in product quality analysis.
-        </p>
+        <ul class="industry-bullets">
+          <li><strong>Search Relevance (Palo Alto, CA):</strong> Fine-tuned a listwise LLM for search reranking using PyTorch + HuggingFace on AWS SageMaker (multi-GPU).</li>
+          <li><strong>Impact:</strong> Significantly improved ranking in nDCG@1.</li>
+          <li><strong>Product Quality (Seattle, WA):</strong> Developed a predictive GBDT/NN ensemble model for pre-purchase customer satisfaction using Scala Spark, Polars, and AutoGluon.</li>
+          <li><strong>Impact:</strong> Generated dense defect probability scores to address log sparsity, enabling downstream applications in search ranking and fault attribution.</li>
+        </ul>        
         <div class="sub-section">
           <div class="subsection-header">
             <h4>Description</h4>
             <button class="details-toggle" aria-expanded="false">Show <span class="arrow">▸</span></button>
           </div>
-          <div class="collapsible-content">
-            <div class="publication-cards-wrapper">
-              <h4>Machine Learning Pipeline</h4>
-              <p>I employ a versatile modeling strategy, utilizing both custom deep learning (PyTorch, HuggingFace) and AutoML (AutoGluon) before rigorous offline benchmarking. This end-to-end process ensures the final deliverables are not only powerful but also robustly validated against business objectives.</p>
-              <figure class="embedded-research-figure">
-                <img src="/images/internship-pipeline.svg" alt="Machine learning workflow" style="max-width: 100%; width: 500px; height: auto;">
-                <figcaption>
-                  <strong>Figure:</strong> A representative large-scale deep learning workflow. This architecture demonstrates my approach to building scalable machine learning pipelines. The process begins with distributed querying on large-scale cloud data, followed by high-performance ETL using modern data frame libraries.
-                </figcaption>
-              </figure>
-            </div>
           </div>
         </div>
         <div class="industry-tags">
@@ -155,26 +124,13 @@ author_profile: true
       <!-- VUNO Experience Card -->
       <div class="industry-card">
         <h4>VUNO Inc.<img src="/images/vuno.jpeg" alt="VUNO logo" class="company-logo"></h4>
-        <p>
-          In my three years at VUNO, I evolved from a Researcher to a Research Team Lead, solving problems that arise when developing deep learning models for medical imaging. I led research on ML methodologies that resulted in first-author publications at premier AI venues (NeurIPS, AAAI) and contributed to the analysis of models across various modalities.
-        </p>
         <div class="sub-section">
           <div class="subsection-header">
-            <h4>Description</h4>
-            <button class="details-toggle" aria-expanded="false">Show <span class="arrow">▸</span></button>
-          </div>
-          <div class="collapsible-content">
-            <div class="publication-cards-wrapper">
-              <h4>Detecting abnormalities in Chest X-rays</h4>
-              <p>Many diseases, such as tumors or infections, manifest as subtle visual patterns in chest X-ray images including localized shadows, nodules, or irregular textures. Deep learning models can be trained to recognize these abnormalities. By detecting and localizing such patterns, these models help scale diagnostic support in medical imaging. </p>
-              <figure class="embedded-research-figure">
-                <img src="/images/nih-nodule.png" alt="Nodule" style="max-width: 100%; width: 500px; height: auto;">
-                <figcaption><strong>Figure:</strong> Example chest X-ray from the NIH ChestX-ray14 dataset, with a bounding box indicating a labeled lung nodule.</figcaption>
-                <div class="figure-citation">
-                  [1] Wang, X., Peng, Y., Lu, L., Lu, Z., Bagheri, M., & Summers, R. M. (2017). Chestx-ray8: Hospital-scale chest x-ray database and benchmarks on weakly-supervised classification and localization of common thorax diseases. In Proceedings of the IEEE conference on computer vision and pattern recognition.
-                </div>
-              </figure>
-            </div>
+            <ul class="industry-bullets">
+              <li>Developed deep learning architectures for Chest X-ray and other medical imaging analysis using PyTorch.</li>
+              <li>Designed an active learning algorithm that significantly reduced labeling costs (published at NeurIPS 2022).</li>
+              <li>Implemented out-of-distribution (OOD) detection modules for production diagnostic software to prevent silent failures on anomalous data (published at AAAI).</li>
+            </ul>          
           </div>
         </div>
         <!-- VUNO Publications -->

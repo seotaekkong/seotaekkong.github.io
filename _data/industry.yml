@@ -1,0 +1,20 @@
+companies:
+  - name: Amazon
+    logo: amazon-logo-squid-ink-smile-orange.png
+    role: Applied Scientist Intern
+    segments:
+      - label: Product quality
+        dates: May 2024 – Aug 2024
+      - label: Search relevance
+        dates: May 2023 – Feb 2024
+    tech: [PyTorch, HuggingFace, AWS, Spark, Polars, AutoGluon]
+
+  - name: VUNO Inc.
+    logo: vuno.jpeg
+    role: Team Lead / Researcher
+    segments:
+      - label: Advanced Research 
+        dates: Mar 2021 – Aug 2022
+      - label: Chest X-ray
+        dates: May 2019 – Mar 2021
+    tech: [PyTorch, Computer vision, Active learning, OOD detection]

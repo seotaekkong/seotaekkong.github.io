@@ -1,0 +1,292 @@
+.industry-bullets {
+  margin: 0.5rem 0 0 1.2rem;
+}
+.industry-bullets li {
+  margin: 0.35rem 0;
+}
+
+/* Make the main content area wider on large screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Allow sidebar/profile text (like school name) to wrap instead of truncating */
+.author__content,
+.author__urls,
+.author__urls li,
+.sidebar,
+.sidebar p,
+.sidebar a {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Publications page styling */
+.pub-intro{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  margin: 10px 0 22px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+.pub-intro-text{
+  color: rgba(0,0,0,.70);
+  line-height: 1.35;
+}
+
+/* Scholar logo sizing (fix huge icon) */
+.scholar-logo{
+  height: 18px;
+  width: auto;
+  display: block;
+}
+
+/* Publication grid spacing */
+/* More space between publication cards so the left blue stripe doesn't look continuous */
+.pub-grid{
+  gap: 26px;              /* try 22–32px; 26px is a good start */
+  margin: 14px 0 34px;
+}
+
+/* If you still see “continuous line” due to card padding/border, add a tiny inset */
+.pub-card{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* Publication cards: cleaner look */
+.pub-card{
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #ffffff;
+  padding: 16px 18px;
+}
+
+.pub-title{
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+/* Authors slightly smaller + calmer */
+.pub-authors{
+  margin-top: 6px;
+  font-size: 0.98rem;
+  color: rgba(0,0,0,.62);
+}
+
+/* Meta line */
+.pub-meta{
+  margin-top: 10px;
+  color: rgba(0,0,0,.65);
+}
+
+/* Badge: make it smaller/cleaner */
+.pub-badge{
+  font-size: .75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(0,0,0,.03);
+}
+
+/* Publications: make "Paper" look like a clean link button (no gray fill) */
+.pub-btn{
+  background: transparent !important;
+  border: 1px solid rgba(0,0,0,.18) !important;
+  color: #2b6cb0 !important;
+  font-weight: 650;
+  text-decoration: underline;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.pub-btn:hover{
+  background: transparent !important;
+  border-color: rgba(0,0,0,.28) !important;
+  text-decoration: underline;
+}
+
+/* Optional: subtle hover without shadows */
+.pub-card:hover{
+  border-color: rgba(0,0,0,.14);
+}
+
+.pub-link-inline{
+  margin-left: 8px;
+  font-weight: 600;
+  font-size: 0.95em;
+  text-decoration: none;
+}
+
+.pub-link-inline:hover{
+  text-decoration: underline;
+}
+
+/* Guaranteed vertical separation between publication cards */
+.pub-card{
+  margin-bottom: 26px !important;
+}
+
+.exp-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.exp-card{
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.exp-company{
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.exp-role{
+  font-weight: 650;
+  margin-top: 2px;
+}
+
+.exp-dates{
+  margin-top: 4px;
+  color: rgba(0,0,0,0.60);
+  font-size: 0.95rem;
+}
+
+.exp-bullets{
+  margin: 10px 0 0 1.15rem;
+}
+
+.exp-bullets li{
+  margin: 0.35rem 0;
+}
+
+.exp-tags{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tag{
+  font-size: 0.82rem;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.03);
+}
+
+@media (min-width: 1100px){
+  .exp-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.scholar-logo{
+  height: 18px;
+  width: auto;
+  max-width: 120px;
+}
+
+
+/* Industry cards layout */
+.exp-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+@media (min-width: 1100px){
+  .exp-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+.exp-card{
+  background: #f7faff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 18px 20px;
+}
+
+/* Header with logo */
+.exp-companyline{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-logo{
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.exp-company{
+  font-weight: 850;
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+
+.exp-role{
+  margin-top: 6px;
+  font-weight: 650;
+  color: rgba(0,0,0,.80);
+}
+
+/* Rows: label left, dates right (hfill-like, but robust) */
+.exp-rows{
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.exp-rowitem{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 14px;
+  align-items: baseline;
+}
+
+.exp-left{
+  font-weight: 600;
+  color: rgba(0,0,0,.85);
+  min-width: 0;
+}
+
+.exp-right{
+  white-space: nowrap;
+  color: rgba(0,0,0,.60);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tech chips (keep your current look) */
+.exp-tags{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exp-tag{
+  font-size: .84rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.65);
+}

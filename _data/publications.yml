@@ -1,0 +1,74 @@
+journals:
+  - title: "Finite-Sample Weak Convergence Rates of Nonlinear Stochastic Approximation"
+    authors:
+      - "S. T. Kong"
+      - "R. Srikant"
+    venue: "Under review"
+    year: 2026
+    url: "https://arxiv.org/abs/2602.02445"
+
+  - title: "Nonasymptotic CLT and Error Bounds for Two-Time-Scale Stochastic Approximation"
+    authors:
+      - "S. T. Kong"
+      - "S. Zeng"
+      - "T. T. Doan"
+      - "R. Srikant"
+    venue: "Under review"
+    year: 2025
+    url: "https://arxiv.org/abs/2502.09884"
+
+  - title: "Spectral Clustering for Crowdsourcing with Inherently Distinct Task Types"
+    authors:
+      - "S. Mandal*"
+      - "S. T. Kong*"
+      - "D. Katselis"
+      - "R. Srikant"
+    venue: "TMLR"
+    year: 2025
+    url: "https://openreview.net/forum?id=jVQjtzcvAc"
+
+conferences:
+
+  - title: "Provably Convergent Primal-Dual DPO for Constrained LLM Alignment"
+    authors:
+      - "Y. Du"
+      - "S. T. Kong"
+      - "R. Srikant"
+    venue: "Under Review"
+    year: 2026
+    url: "https://arxiv.org/abs/2510.05703"
+
+  - title: "Key Feature Replacement of In-Distribution Samples for Out-of-Distribution Detection"
+    authors:
+      - "J. Kim*"
+      - "S. T. Kong*"
+      - "D. Na"
+      - "K.-H. Jung"
+    venue: "AAAI"
+    year: 2023
+    url: "https://ojs.aaai.org/index.php/AAAI/article/view/25995"
+
+  - title: "A Neural Pre-Conditioning Active Learning Algorithm to Reduce Label Complexity"
+    authors:
+      - "S. T. Kong"
+      - "S. Jeon"
+      - "D. Na"
+      - "J. Lee"
+      - "H.-S. Lee"
+      - "K.-H. Jung"
+    venue: "NeurIPS"
+    year: 2022
+    url: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/d3b8ce5e27b1c622d1b3da22b215e59b-Abstract-Conference.html"
+
+preprints:
+  - title: "Optimal Noise Schedules for Diffusion Models"
+    authors: []
+    venue: "In progress"
+    year:
+    url:
+
+  - title: "When to Use Polyak-Ruppert Averaging in Stochastic Approximation?"
+    authors: []
+    venue: "In progress"
+    year:
+    url:

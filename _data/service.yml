@@ -1,6 +1,23 @@
 # Academic Service
 title: Academic Service
 categories:
+  - name: Service Recognition & Leadership
+    items:
+      - role: Outstanding Program Committee Member (AAAI 2026)
+        event: "Awarded to top 0.16% of reviewers — 42 out of 26,421"
+        year: 2026
+        show_year: false
+      - role: Session Chair
+        event: INFORMS Applied Probability Society
+        year: 2025
+
+  - name: Conference/Journal Review
+    items:
+      - name: NeurIPS
+      - name: ICML
+      - name: AAAI
+      - name: Open Journal of Control Systems
+
   - name: Teaching
     items: 
       - course: ECE 586 MDPs and Reinforcement Learning
@@ -10,15 +27,5 @@ categories:
         semester: Fall 2017
         role: Teaching Assistant
         
-  - name: Conference/Journal Review
-    items:
-      - name: NeurIPS
-      - name: ICML
-      - name: AAAI
-      - name: Open Journal of Control Systems
 
-  - name: Organizational Roles
-    items:
-      - role: Session Chair
-        event: INFORMS Applied Probability Society
-        year: 2025 
+

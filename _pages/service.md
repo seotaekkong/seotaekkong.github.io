@@ -18,7 +18,10 @@ excerpt_separator: ""
             <!-- Case 1: This is an Organizational Role -->
             <div class="service-item-card">
               <div class="item-main">{{ item.role }}</div>
-              <div class="item-context">{{ item.event }}, {{ item.year }}</div>
+              <div class="item-context">
+              {{ item.event }}
+              {% if item.year and item.show_year != false %}, {{ item.year }}{% endif %}
+              </div>
             </div>
 
         {% elsif item.course %}

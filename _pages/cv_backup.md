@@ -11,16 +11,16 @@ author_profile: true
 
 ## Education
 **Ph.D. Candidate, Electrical and Computer Engineering**  
-*University of Illinois, Urbana-Champaign*  
+*University of Illinois Urbana-Champaign*  
 *Advisor: R. Srikant*  
 *Aug 2022 - May 2027 (Expected)*
 
 **M.S., Electrical and Computer Engineering**  
-*University of Illinois, Urbana-Champaign*  
+*University of Illinois Urbana-Champaign*  
 *Aug 2017 - May 2019*
 
 **B.S. with Highest Honors, Electrical and Computer Engineering**  
-*University of Illinois, Urbana-Champaign*  
+*University of Illinois Urbana-Champaign*  
 *Minor in Mathematics, James Scholar Honors Program*  
 *Aug 2014 - May 2017*
 
